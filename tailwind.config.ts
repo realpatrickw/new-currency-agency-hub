@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -14,6 +15,10 @@ export default {
 			center: true,
 			padding: '2rem',
 			screens: {
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
 				'2xl': '1400px'
 			}
 		},
@@ -61,7 +66,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for New Currency
+				'new-pink': '#ff0066',
+				'new-dark': '#0a0a0a',
+				'new-gray': '#1a1a1a',
+				'new-light': '#f8f8f8',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +94,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out'
 			}
 		}
 	},
