@@ -1,26 +1,28 @@
+
 import React, { useState } from 'react';
+import { supabase } from "@/integrations/supabase/client";
 
 const ClientsSection = () => {
   const clients = [
     {
       name: 'Penn Venture Lab',
-      logo: '/lovable-uploads/e47ac63f-2627-43de-a398-bb2a3f7c2683.png'
+      logo: `${supabase.storage.from('client-logos').getPublicUrl('penn-venture-lab.png').data.publicUrl}`
     },
     {
       name: 'Tsai Center for Innovative Thinking at Yale',
-      logo: '/lovable-uploads/3716efca-1cf6-4135-b374-e0ddc6c085fd.png'
+      logo: `${supabase.storage.from('client-logos').getPublicUrl('tsai-center.png').data.publicUrl}`
     },
     {
       name: 'University of Toronto Entrepreneurship',
-      logo: '/lovable-uploads/263a30cf-46e2-4c41-acdb-511ba6cf0420.png'
+      logo: `${supabase.storage.from('client-logos').getPublicUrl('toronto-entrepreneurship.png').data.publicUrl}`
     },
     {
       name: 'Yale Ventures',
-      logo: '/lovable-uploads/cd1539e9-2861-4e43-804b-4cad6dc559a2.png'
+      logo: `${supabase.storage.from('client-logos').getPublicUrl('yale-ventures.png').data.publicUrl}`
     },
     {
       name: 'The Bridge',
-      logo: '/lovable-uploads/63a035c0-a416-44a2-a5ee-d2e6434fad2d.png'
+      logo: `${supabase.storage.from('client-logos').getPublicUrl('the-bridge.png').data.publicUrl}`
     }
   ];
 
