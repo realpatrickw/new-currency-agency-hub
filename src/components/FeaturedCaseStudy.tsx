@@ -1,20 +1,24 @@
+
 import React from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const FeaturedCaseStudy = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="py-12 bg-new-gray">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          <div className="relative h-full">
-            <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="relative rounded-lg overflow-hidden">
+            <div className="aspect-w-4 aspect-h-3 md:aspect-h-5">
               <div className="absolute inset-0 bg-new-gray/90"></div>
-              <div className="absolute top-8 left-4 right-4">
+              <div className="absolute top-0 left-0 right-0 p-6">
                 <img 
                   src="https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//Image_20250428123638.png"
                   alt="FindHiringManager.com logo"
-                  className="w-52 h-auto object-contain mx-auto mb-6"
+                  className="w-48 h-auto object-contain mx-auto mb-6"
                 />
-                <div className="space-y-3">
+                <div className="space-y-3 text-center">
                   <p className="text-sm text-white/70">Featured Case Study</p>
                   <h3 className="text-xl font-bold text-white">FindHiringManager.com: From Launch to Success</h3>
                   <p className="text-white/70 text-sm">How we helped achieve rapid customer acquisition through strategic marketing</p>
