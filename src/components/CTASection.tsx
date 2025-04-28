@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
@@ -15,18 +14,17 @@ const CTASection = () => {
                 Get in Touch <ArrowRight className="ml-2" size={18} />
               </Button>
             </div>
-            <div className="relative h-[300px] md:h-[400px]">
+            <div className="relative h-[400px] md:h-[500px] lg:h-[600px]">
               <img 
                 src="https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//ChatGPT%20Image%20Apr%2028,%202025,%2001_11_32%20PM.png"
                 alt="Business Analytics Dashboard"
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-contain rounded-lg"
               />
             </div>
           </div>
         </div>
       </div>
       
-      {/* Background elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-grid-white-100/10 bg-grid"></div>
       </div>
