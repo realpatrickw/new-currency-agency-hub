@@ -6,32 +6,38 @@ import { ArrowRight } from 'lucide-react';
 const HeroSection = () => {
   return (
     <section className="pt-32 pb-20 md:pt-36 md:pb-24 relative overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0 opacity-20"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          filter: 'blur(8px)',
-        }}
-      />
+      <div className="absolute inset-0 z-0 bg-new-dark opacity-95" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="block text-gradient">Attention is</span>
-            <span className="block text-new-pink">the new currency</span>
-          </h1>
-          
-          <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-            New Currency helps AI companies and SaaS businesses grow through strategic
-            influencer marketing and UGC that converts.
-          </p>
-          
-          <Button className="bg-new-pink hover:bg-new-pink/90 text-white px-8 py-6 text-lg rounded-md flex items-center mx-auto">
-            Get Started <ArrowRight className="ml-2" size={18} />
-          </Button>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Text Content */}
+          <div className="max-w-xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="block text-gradient mb-2">Attention is</span>
+              <span className="block text-new-pink">the new currency</span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-white/70 mb-8">
+              New Currency helps AI companies and SaaS businesses grow through strategic
+              influencer marketing and UGC that converts.
+            </p>
+            
+            <Button className="bg-new-pink hover:bg-new-pink/90 text-white px-8 py-6 text-lg rounded-md flex items-center">
+              Get Started <ArrowRight className="ml-2" size={18} />
+            </Button>
+          </div>
+
+          {/* Right Column - Image */}
+          <div className="relative lg:ml-auto">
+            <div className="relative aspect-[4/3] w-full max-w-[600px] mx-auto">
+              <img
+                src="/lovable-uploads/9761ff00-c636-4042-aa58-d46ea05ae8ee.png"
+                alt="Social Media Marketing Showcase"
+                className="w-full h-full object-contain"
+              />
+              <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-br from-new-pink/20 to-purple-500/20 blur-3xl opacity-30 rounded-full" />
+            </div>
+          </div>
         </div>
       </div>
       
