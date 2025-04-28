@@ -1,4 +1,7 @@
+
 import React from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar";
+
 const TestimonialSection = () => {
   return <section className="py-20 bg-new-gray relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -18,7 +21,10 @@ const TestimonialSection = () => {
               generated more qualified leads in one month than our previous campaigns did in a quarter."
             </p>
             <div className="flex items-center">
-              <div className="w-12 h-12 rounded-full bg-purple-700/30"></div>
+              <Avatar className="w-12 h-12">
+                <AvatarImage src="https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//WeChat%20Screenshot_20250428125701.png" alt="Sarah J" />
+                <AvatarFallback className="bg-purple-700/30">SJ</AvatarFallback>
+              </Avatar>
               <div className="ml-4">
                 <p className="text-white font-semibold">Sarah J</p>
                 <p className="text-white/60 text-sm">CMO, Consumer AI</p>
@@ -49,3 +55,4 @@ const TestimonialSection = () => {
     </section>;
 };
 export default TestimonialSection;
+
