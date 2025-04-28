@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Mail } from 'lucide-react';
+import { toast } from "sonner";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -17,9 +18,21 @@ const Navbar = () => {
         top: offsetPosition,
         behavior: 'smooth'
       });
-      setMobileMenuOpen(false); // Close mobile menu after clicking
+      setMobileMenuOpen(false);
     }
   };
+
+  const handleContact = () => {
+    window.location.href = 'mailto:info@newcurrency.io';
+    toast.success("Opening email client...");
+  };
+
+  const menuItems = [
+    { id: 'services', label: 'Services' },
+    { id: 'about', label: 'About' },
+    { id: 'testimonials', label: 'Clients' },
+    { id: 'contact', label: 'Contact', onClick: handleContact },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-new-dark/90 backdrop-blur-sm border-b border-white/10">
@@ -36,20 +49,24 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {['services', 'clients', 'portfolio', 'about', 'contact'].map((item) => (
+            {menuItems.map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item)}
+                key={item.id}
+                onClick={() => item.onClick ? item.onClick() : scrollToSection(item.id)}
                 className="text-white/70 hover:text-white transition-colors"
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+                {item.label}
               </button>
             ))}
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:flex">
-            <Button className="bg-new-pink hover:bg-new-pink/90 text-white font-medium">
+            <Button 
+              onClick={handleContact}
+              className="bg-new-pink hover:bg-new-pink/90 text-white font-medium"
+            >
+              <Mail className="mr-2 h-4 w-4" />
               Get Started
             </Button>
           </div>
@@ -71,16 +88,20 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-new-dark border-t border-white/10">
           <div className="container mx-auto px-4 py-4 space-y-3">
-            {['services', 'clients', 'portfolio', 'about', 'contact'].map((item) => (
+            {menuItems.map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item)}
+                key={item.id}
+                onClick={() => item.onClick ? item.onClick() : scrollToSection(item.id)}
                 className="block w-full text-left text-white/70 hover:text-white py-2"
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+                {item.label}
               </button>
             ))}
-            <Button className="w-full bg-new-pink hover:bg-new-pink/90 text-white font-medium mt-4">
+            <Button 
+              onClick={handleContact}
+              className="w-full bg-new-pink hover:bg-new-pink/90 text-white font-medium mt-4"
+            >
+              <Mail className="mr-2 h-4 w-4" />
               Get Started
             </Button>
           </div>
@@ -91,3 +112,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
