@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
-
 const FeaturedCaseStudy = () => {
-  return (
-    <section className="py-16 bg-new-gray">
+  return <section className="py-16 bg-new-gray">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="relative">
@@ -36,7 +33,7 @@ const FeaturedCaseStudy = () => {
               </div>
               <div>
                 <p className="text-new-pink font-bold text-2xl">1.2M+</p>
-                <p className="text-white/70">Social Shares</p>
+                <p className="text-white/70">Impression</p>
               </div>
               <div>
                 <p className="text-new-pink font-bold text-2xl">85%</p>
@@ -49,8 +46,6 @@ const FeaturedCaseStudy = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default FeaturedCaseStudy;
