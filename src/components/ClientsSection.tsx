@@ -6,23 +6,23 @@ const ClientsSection = () => {
   const clients = [
     {
       name: 'Penn Venture Lab',
-      logo: `${supabase.storage.from('client-logos').getPublicUrl('penn-venture-lab.png').data.publicUrl}`
+      logo: `${supabase.storage.from('client-logos').getPublicUrl('1 (2).png').data.publicUrl}`
     },
     {
       name: 'Tsai Center for Innovative Thinking at Yale',
-      logo: `${supabase.storage.from('client-logos').getPublicUrl('tsai-center.png').data.publicUrl}`
+      logo: `${supabase.storage.from('client-logos').getPublicUrl('2 (2).png').data.publicUrl}`
     },
     {
       name: 'University of Toronto Entrepreneurship',
-      logo: `${supabase.storage.from('client-logos').getPublicUrl('toronto-entrepreneurship.png').data.publicUrl}`
+      logo: `${supabase.storage.from('client-logos').getPublicUrl('UTE-Signature-Lock-Up_Colour copy.png').data.publicUrl}`
     },
     {
       name: 'Yale Ventures',
-      logo: `${supabase.storage.from('client-logos').getPublicUrl('yale-ventures.png').data.publicUrl}`
+      logo: `${supabase.storage.from('client-logos').getPublicUrl('yvlogo.png').data.publicUrl}`
     },
     {
       name: 'The Bridge',
-      logo: `${supabase.storage.from('client-logos').getPublicUrl('the-bridge.png').data.publicUrl}`
+      logo: `${supabase.storage.from('client-logos').getPublicUrl('1 (2).png').data.publicUrl}`
     }
   ];
 
