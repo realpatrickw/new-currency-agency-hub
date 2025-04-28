@@ -56,7 +56,7 @@ const Footer = () => {
               <li><a href="#" className="text-white/60 hover:text-white transition-colors">UGC Content</a></li>
               <li><a href="#" className="text-white/60 hover:text-white transition-colors">Strategy & Planning</a></li>
               <li><a href="#" className="text-white/60 hover:text-white transition-colors">Analytics & Reporting</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Community Building</a></li>
+              
             </ul>
           </div>
           
