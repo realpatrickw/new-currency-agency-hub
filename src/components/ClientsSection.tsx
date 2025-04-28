@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 
 const ClientsSection = () => {
   const clients = [
@@ -25,6 +24,16 @@ const ClientsSection = () => {
     }
   ];
 
+  const [imgErrors, setImgErrors] = useState<Record<string, boolean>>({});
+
+  const handleImageError = (clientName: string) => {
+    setImgErrors(prev => ({
+      ...prev,
+      [clientName]: true
+    }));
+    console.error(`Failed to load image for ${clientName}`);
+  };
+
   return (
     <section id="clients" className="py-16 bg-new-gray">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,12 +49,19 @@ const ClientsSection = () => {
               key={client.name} 
               className="w-full flex flex-col items-center justify-center h-24 transition-opacity hover:opacity-80"
             >
-              <img
-                src={client.logo}
-                alt={`${client.name} logo`}
-                className="max-h-16 md:max-h-20 lg:max-h-24 object-contain"
-                loading="lazy"
-              />
+              {imgErrors[client.name] ? (
+                <div className="text-center p-2 bg-gray-800 rounded">
+                  <p className="font-medium text-sm">{client.name}</p>
+                </div>
+              ) : (
+                <img
+                  src={client.logo}
+                  alt={`${client.name} logo`}
+                  className="max-h-16 md:max-h-20 lg:max-h-24 object-contain"
+                  loading="lazy"
+                  onError={() => handleImageError(client.name)}
+                />
+              )}
             </div>
           ))}
         </div>
