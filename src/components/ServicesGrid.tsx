@@ -1,53 +1,49 @@
 
 import React from 'react';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 
-const ServiceCard = ({ icon, title, description }: { icon: string, title: string, description: string }) => {
+const ServiceCard = ({ 
+  image, 
+  title, 
+  description 
+}: { 
+  image: string;
+  title: string;
+  description: string;
+}) => {
   return (
-    <div className="bg-new-gray rounded-lg overflow-hidden border border-white/10 group hover:border-new-pink/50 transition-all duration-300">
-      <div className="aspect-w-1 aspect-h-1 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-70 z-10"></div>
-        <div className="p-6 absolute bottom-0 left-0 z-20 w-full">
-          <h3 className="text-white font-bold text-lg mb-2">{title}</h3>
-          <p className="text-white/70 text-sm">{description}</p>
+    <HoverCard>
+      <HoverCardTrigger>
+        <div className="relative group rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg">
+          <img 
+            src={image} 
+            alt={title} 
+            className="w-full h-[400px] object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <h3 className="text-white font-bold text-2xl">{title}</h3>
+          </div>
         </div>
-        {/* This would be replaced with a real image in a production site */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-800/20 to-new-pink/20"></div>
-      </div>
-    </div>
+      </HoverCardTrigger>
+      <HoverCardContent className="w-80 p-4">
+        <h4 className="font-semibold mb-2">{title}</h4>
+        <p className="text-sm text-gray-500">{description}</p>
+      </HoverCardContent>
+    </HoverCard>
   );
 };
 
 const ServicesGrid = () => {
   const services = [
     {
-      icon: 'influencer',
-      title: 'AI Influencer Marketing',
-      description: 'Strategic partnerships with influencers who understand AI products',
+      image: 'https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//ChatGPT%20Image%20Apr%2028,%202025,%2012_23_01%20PM.png',
+      title: 'Influencer Marketing',
+      description: 'We connect you with thought leaders and influencers who already have an engaged audience in the tech and AI space to promote your content and products effectively.',
     },
     {
-      icon: 'ugc',
-      title: 'UGC Creation & Strategy',
-      description: 'Authentic user-generated content that drives conversions',
-    },
-    {
-      icon: 'content',
-      title: 'Technical Content Marketing',
-      description: 'Simplified storytelling for complex SaaS products',
-    },
-    {
-      icon: 'strategy',
-      title: 'Go-To-Market Strategy',
-      description: 'Launch strategies tailored for AI and SaaS products',
-    },
-    {
-      icon: 'community',
-      title: 'Community Management',
-      description: 'Building and nurturing communities around your tech product',
-    },
-    {
-      icon: 'analytics',
-      title: 'Performance Analytics',
-      description: 'Data-driven insights to optimize your marketing spend',
+      image: 'https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//3e7d1f6d-2818-4d63-8d3c-2ba2a838577e.png',
+      title: 'UGC Marketing',
+      description: 'We scale your campaigns by coordinating with micro-influencers and content creators to produce authentic videos and content, building organic social proof for your product.',
     },
   ];
 
@@ -61,11 +57,11 @@ const ServicesGrid = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <ServiceCard 
               key={index}
-              icon={service.icon}
+              image={service.image}
               title={service.title}
               description={service.description}
             />
@@ -77,3 +73,4 @@ const ServicesGrid = () => {
 };
 
 export default ServicesGrid;
+
