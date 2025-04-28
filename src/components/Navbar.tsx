@@ -6,6 +6,21 @@ import { Menu, X } from 'lucide-react';
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80; // Account for fixed header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      setMobileMenuOpen(false); // Close mobile menu after clicking
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-new-dark/90 backdrop-blur-sm border-b border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,21 +36,15 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-white/70 hover:text-white transition-colors">
-              Services
-            </a>
-            <a href="#clients" className="text-white/70 hover:text-white transition-colors">
-              Clients
-            </a>
-            <a href="#portfolio" className="text-white/70 hover:text-white transition-colors">
-              Portfolio
-            </a>
-            <a href="#about" className="text-white/70 hover:text-white transition-colors">
-              About
-            </a>
-            <a href="#contact" className="text-white/70 hover:text-white transition-colors">
-              Contact
-            </a>
+            {['services', 'clients', 'portfolio', 'about', 'contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className="text-white/70 hover:text-white transition-colors"
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </button>
+            ))}
           </nav>
 
           {/* CTA Button */}
@@ -62,21 +71,15 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-new-dark border-t border-white/10">
           <div className="container mx-auto px-4 py-4 space-y-3">
-            <a href="#services" className="block text-white/70 hover:text-white py-2">
-              Services
-            </a>
-            <a href="#clients" className="block text-white/70 hover:text-white py-2">
-              Clients
-            </a>
-            <a href="#portfolio" className="block text-white/70 hover:text-white py-2">
-              Portfolio
-            </a>
-            <a href="#about" className="block text-white/70 hover:text-white py-2">
-              About
-            </a>
-            <a href="#contact" className="block text-white/70 hover:text-white py-2">
-              Contact
-            </a>
+            {['services', 'clients', 'portfolio', 'about', 'contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className="block w-full text-left text-white/70 hover:text-white py-2"
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </button>
+            ))}
             <Button className="w-full bg-new-pink hover:bg-new-pink/90 text-white font-medium mt-4">
               Get Started
             </Button>
