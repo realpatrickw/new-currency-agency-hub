@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
+
 const CTASection = () => {
   return <section className="py-20 bg-black relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -13,8 +15,13 @@ const CTASection = () => {
                 Get in Touch <ArrowRight className="ml-2" size={18} />
               </Button>
             </div>
-            
-            
+            <div className="relative h-[300px] md:h-[400px]">
+              <img 
+                src="https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//ChatGPT%20Image%20Apr%2028,%202025,%2001_11_32%20PM.png"
+                alt="Business Analytics Dashboard"
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -25,4 +32,5 @@ const CTASection = () => {
       </div>
     </section>;
 };
+
 export default CTASection;
