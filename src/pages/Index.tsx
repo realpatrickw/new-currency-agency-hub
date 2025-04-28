@@ -8,7 +8,6 @@ import ServicesGrid from '@/components/ServicesGrid';
 import ContentGrid from '@/components/ContentGrid';
 import FeaturedCaseStudy from '@/components/FeaturedCaseStudy';
 import TestimonialSection from '@/components/TestimonialSection';
-import PlatformShowcase from '@/components/PlatformShowcase';
 import CTASection from '@/components/CTASection';
 import FinalCTA from '@/components/FinalCTA';
 import Footer from '@/components/Footer';
@@ -26,7 +25,6 @@ const Index = () => {
         <ContentGrid />
         <FeaturedCaseStudy />
         <TestimonialSection />
-        <PlatformShowcase />
         <CTASection />
         <FinalCTA />
       </main>
