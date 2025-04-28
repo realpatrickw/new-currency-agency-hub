@@ -22,7 +22,11 @@ const TestimonialSection = () => {
             </p>
             <div className="flex items-center">
               <Avatar className="w-12 h-12">
-                <AvatarImage src="https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//WeChat%20Screenshot_20250428125701.png" alt="Sarah J" />
+                <AvatarImage 
+                  src="https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//WeChat%20Screenshot_20250428125701.png" 
+                  alt="Sarah J"
+                  className="object-cover"
+                />
                 <AvatarFallback className="bg-purple-700/30">SJ</AvatarFallback>
               </Avatar>
               <div className="ml-4">
