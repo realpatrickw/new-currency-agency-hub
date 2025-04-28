@@ -1,4 +1,7 @@
+
 import React from 'react';
+import { Card, CardContent } from "@/components/ui/card";
+
 const ContentCard = ({
   title,
   category,
@@ -8,7 +11,8 @@ const ContentCard = ({
   category: string;
   overlay?: boolean;
 }) => {
-  return <div className="relative rounded-lg overflow-hidden group cursor-pointer">
+  return (
+    <div className="relative rounded-lg overflow-hidden group cursor-pointer">
       <div className="aspect-w-1 aspect-h-1 relative">
         {/* This would be a real image in production */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-800/20 to-new-pink/20"></div>
@@ -26,28 +30,63 @@ const ContentCard = ({
           <h4 className="text-white font-medium">{title}</h4>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 const ContentGrid = () => {
-  const contentItems = [{
-    title: "Connecting Customers",
-    category: "UGC Campaign"
-  }, {
-    title: "AI Personalization Strategy",
-    category: "Case Study"
-  }, {
-    title: "Driving SaaS Engagement",
-    category: "Influencer Marketing"
-  }, {
-    title: "Key SaaS Metrics That Matter",
-    category: "Whitepaper"
-  }, {
-    title: "Scaling Through Creative",
-    category: "Success Story"
-  }, {
-    title: "Social Media Strategy for AI",
-    category: "Guide"
-  }];
-  return;
+  const contentItems = [
+    {
+      title: "Connecting Customers",
+      category: "UGC Campaign"
+    },
+    {
+      title: "AI Personalization Strategy",
+      category: "Case Study"
+    },
+    {
+      title: "Driving SaaS Engagement",
+      category: "Influencer Marketing"
+    },
+    {
+      title: "Key SaaS Metrics That Matter",
+      category: "Whitepaper"
+    },
+    {
+      title: "Scaling Through Creative",
+      category: "Success Story"
+    },
+    {
+      title: "Social Media Strategy for AI",
+      category: "Guide"
+    }
+  ];
+  
+  return (
+    <section className="py-24 bg-new-dark">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            Content that <span className="text-new-pink">connects</span>
+          </h2>
+          <p className="text-white/70">
+            Explore our resources designed to help AI and SaaS companies maximize their marketing impact.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {contentItems.map((item, index) => (
+            <ContentCard 
+              key={index}
+              title={item.title}
+              category={item.category}
+              overlay={true}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
+
 export default ContentGrid;
