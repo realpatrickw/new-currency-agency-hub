@@ -43,7 +43,14 @@ const TestimonialSection = () => {
               professionally produced videos. Their understanding of the SaaS market is unparalleled."
             </p>
             <div className="flex items-center">
-              <div className="w-12 h-12 rounded-full bg-new-pink/30"></div>
+              <Avatar className="w-12 h-12">
+                <AvatarImage 
+                  src="https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//WeChat%20Screenshot_20250428125818.png" 
+                  alt="Michael C"
+                  className="object-cover"
+                />
+                <AvatarFallback className="bg-purple-700/30">MC</AvatarFallback>
+              </Avatar>
               <div className="ml-4">
                 <p className="text-white font-semibold">Michael C</p>
                 <p className="text-white/60 text-sm">Founder, B2B SaaS</p>
@@ -58,5 +65,5 @@ const TestimonialSection = () => {
       <div className="absolute bottom-20 -right-40 w-80 h-80 bg-purple-500/10 rounded-full filter blur-3xl"></div>
     </section>;
 };
-export default TestimonialSection;
 
+export default TestimonialSection;
