@@ -28,7 +28,7 @@ const ClientsSection = () => {
   return <section id="clients" className="py-16 bg-new-gray">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-2xl font-semibold mb-2">Trusted By Entrepreneurs Across the Globe </h2>
+          <h2 className="text-2xl font-semibold mb-2">Trusted By Entrepreneurs From Top Accelerator</h2>
           
         </div>
         
