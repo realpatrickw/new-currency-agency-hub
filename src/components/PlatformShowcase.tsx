@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Currency } from "lucide-react";
@@ -13,11 +12,9 @@ const PlatformShowcase = () => {
               Tracking Your Brand Reputation In Real-Time
             </h2>
             <p className="text-white/70 mb-6">
-              Our proprietary analytics platform gives you real-time insights into your campaign performance, 
-              influencer engagement, and ROI metrics. As we also provide advanced analytics for brands, 
-              including competitor analytics, campaign data tracking, viral content hook analysis, 
-              and provide regular updates and reports for comprehensive performance monitoring.
-              Make data-driven decisions to optimize your marketing strategy.
+              Our proprietary analytics platform delivers real-time insights into campaign performance, 
+              influencer engagement, and ROI metrics. We provide advanced brand analytics including 
+              competitor tracking, campaign data, and viral content analysis with comprehensive reporting.
             </p>
             <ul className="mb-8 space-y-3">
               <li className="flex items-center">
