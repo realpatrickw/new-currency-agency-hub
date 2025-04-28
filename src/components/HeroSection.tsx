@@ -11,13 +11,13 @@ const HeroSection = () => {
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               <span className="block mb-2">
-                <span className="text-white">Attention is </span>
+                <span className="text-white">Attention is the </span>
                 <span className="text-[#ea384c]">new</span>
                 <span className="text-white">currency</span>
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl mb-8 text-slate-50">New Currency is an Influencer Marketing Agency that helps AI companies and SaaS businesses grow through strategic influencer marketing and UGC campaign that converts.</p>
+            <p className="text-lg md:text-xl mb-8 text-slate-50">New Currency is an Influencer Marketing Agency that helps AI companies and SaaS businesses grow. Think Cal AI, we apply similar strategy for your business.</p>
             
             <Button className="bg-new-pink hover:bg-new-pink/90 text-white px-8 py-6 text-lg rounded-md flex items-center">
               Get Started <ArrowRight className="ml-2" size={18} />
