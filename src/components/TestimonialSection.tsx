@@ -1,9 +1,6 @@
-
 import React from 'react';
-
 const TestimonialSection = () => {
-  return (
-    <section className="py-20 bg-new-gray relative overflow-hidden">
+  return <section className="py-20 bg-new-gray relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-new-pink uppercase tracking-wider mb-2">Testimonials</p>
@@ -24,7 +21,7 @@ const TestimonialSection = () => {
               <div className="w-12 h-12 rounded-full bg-purple-700/30"></div>
               <div className="ml-4">
                 <p className="text-white font-semibold">Sarah Johnson</p>
-                <p className="text-white/60 text-sm">CMO, DataSense AI</p>
+                <p className="text-white/60 text-sm">CMO, Consumer AI</p>
               </div>
             </div>
           </div>
@@ -39,7 +36,7 @@ const TestimonialSection = () => {
               <div className="w-12 h-12 rounded-full bg-new-pink/30"></div>
               <div className="ml-4">
                 <p className="text-white font-semibold">Michael Chen</p>
-                <p className="text-white/60 text-sm">Founder, CloudStack SaaS</p>
+                <p className="text-white/60 text-sm">Founder, B2B SaaS</p>
               </div>
             </div>
           </div>
@@ -49,8 +46,6 @@ const TestimonialSection = () => {
       {/* Background elements */}
       <div className="absolute top-20 -left-40 w-80 h-80 bg-new-pink/10 rounded-full filter blur-3xl"></div>
       <div className="absolute bottom-20 -right-40 w-80 h-80 bg-purple-500/10 rounded-full filter blur-3xl"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default TestimonialSection;
