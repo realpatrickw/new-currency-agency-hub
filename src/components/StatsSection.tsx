@@ -1,16 +1,13 @@
-
 import React from 'react';
-
 const StatsSection = () => {
-  return (
-    <section className="py-16 bg-black">
+  return <section className="py-16 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* First Stat */}
           <div className="bg-new-gray p-8 rounded-lg border border-white/10">
             <div className="flex flex-col">
               <span className="text-new-pink text-2xl font-bold mb-2">1M+</span>
-              <p className="text-white text-lg font-semibold">Average Impressions We Bring to Our Clients</p>
+              <p className="text-white text-lg font-semibold">Minimum Impressions We Bring to Our Clients</p>
             </div>
           </div>
           
@@ -26,13 +23,11 @@ const StatsSection = () => {
           <div className="bg-new-gray p-8 rounded-lg border border-white/10">
             <div className="flex flex-col">
               <span className="text-new-pink text-2xl font-bold mb-2">7x</span>
-              <p className="text-white text-lg font-semibold">ROAS in average</p>
+              <p className="text-white text-lg font-semibold">Average ROAS We Bring to Our Clients</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default StatsSection;
