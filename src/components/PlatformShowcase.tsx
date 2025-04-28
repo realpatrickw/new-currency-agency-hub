@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Currency } from "lucide-react";
 
 const PlatformShowcase = () => {
   return (
@@ -48,7 +48,9 @@ const PlatformShowcase = () => {
             
             {/* Decorative elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-new-pink/20 rounded-full filter blur-xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-purple-500/20 rounded-full filter blur-xl"></div>
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 flex items-center justify-center">
+              <Currency size={64} className="text-purple-500/70 animate-pulse" />
+            </div>
           </div>
         </div>
       </div>
