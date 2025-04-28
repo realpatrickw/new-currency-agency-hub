@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
+
 const HeroSection = () => {
   return <section className="pt-32 pb-20 md:pt-36 md:pb-24 relative overflow-hidden">
       <div className="absolute inset-0 z-0 bg-new-dark opacity-95" />
@@ -11,7 +13,8 @@ const HeroSection = () => {
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               <span className="block mb-2">
-                <span className="text-new-pink">new</span>
+                <span className="text-white">Attention </span>
+                <span className="text-[#ea384c]">new</span>
                 <span className="text-white">currency</span>
               </span>
             </h1>
@@ -38,4 +41,5 @@ const HeroSection = () => {
       <div className="absolute bottom-0 -right-40 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl opacity-20"></div>
     </section>;
 };
+
 export default HeroSection;
