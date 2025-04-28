@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ClientsSection = () => {
   const clients = [
@@ -25,12 +25,23 @@ const ClientsSection = () => {
     }
   ];
 
+  // Let's add some debugging to verify images
+  useEffect(() => {
+    // Check if images exist by logging to console
+    clients.forEach(client => {
+      const img = new Image();
+      img.onload = () => console.log(`Image loaded successfully: ${client.name}`);
+      img.onerror = () => console.error(`Failed to load image: ${client.name}, path: ${client.logo}`);
+      img.src = client.logo;
+    });
+  }, []);
+
   return (
     <section id="clients" className="py-16 bg-new-gray">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-2xl font-semibold mb-2">
-            Trusted By Entrepreneurs From Top Accelerator
+            Trusted By Entrepreneurs From Top Accelerators
           </h2>
         </div>
         
@@ -45,7 +56,14 @@ const ClientsSection = () => {
                 alt={`${client.name} logo`}
                 className="h-12 md:h-14 lg:h-16 object-contain"
                 loading="lazy"
+                onError={(e) => {
+                  console.error(`Error loading image for ${client.name}`);
+                  // Fallback to displaying the name if image fails
+                  e.currentTarget.style.display = 'none';
+                }}
               />
+              {/* Backup text in case image fails */}
+              <span className="text-sm text-white opacity-80">{client.name}</span>
             </div>
           ))}
         </div>
