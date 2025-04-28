@@ -26,11 +26,9 @@ const FeaturedCaseStudy = () => {
           <div className="self-center">
             <h2 className="text-3xl font-bold mb-6">Cold Start to Rapid Growth</h2>
             <p className="text-white/70 mb-8">
-              Working with FindHiringManager.com, we implemented a dual-strategy approach combining authentic UGC marketing 
-              with targeted influencer outreach. By partnering with tech professionals and career coaches, we created 
-              compelling content that showcased the platform's effectiveness in job search optimization. This comprehensive 
-              approach helped FindHiringManager.com achieve remarkable early traction, reaching their first 500 customers 
-              in less than two weeks from launch.
+              Through strategic UGC marketing and influencer partnerships, we helped FindHiringManager.com reach their 
+              first 500 customers within two weeks of launch. Our targeted approach with tech professionals and career 
+              coaches demonstrated the platform's effectiveness in optimizing job searches.
             </p>
             <div className="flex flex-wrap gap-6">
               <div>
