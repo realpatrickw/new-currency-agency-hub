@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const FeaturedCaseStudy = () => {
@@ -8,7 +7,7 @@ const FeaturedCaseStudy = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div className="relative h-full">
             <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-800/20 to-new-pink/20"></div>
+              <div className="absolute inset-0 bg-new-gray/90"></div>
               <div className="absolute top-8 left-4 right-4">
                 <img 
                   src="https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//Image_20250428123638.png"
