@@ -1,40 +1,29 @@
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const ClientsSection = () => {
   const clients = [
     {
       name: 'Penn Venture Lab',
-      logo: '/lovable-uploads/98373f0e-628b-45f5-b22a-0eae800fa8ea.png'
+      logo: '/lovable-uploads/e47ac63f-2627-43de-a398-bb2a3f7c2683.png'
     },
     {
       name: 'Tsai Center for Innovative Thinking at Yale',
-      logo: '/lovable-uploads/95b39ad1-6930-48cc-92e4-7da44f43a3b1.png'
+      logo: '/lovable-uploads/3716efca-1cf6-4135-b374-e0ddc6c085fd.png'
     },
     {
       name: 'University of Toronto Entrepreneurship',
-      logo: '/lovable-uploads/9a1f44dc-7b02-493f-bfcb-8dfc5ecd1783.png'
+      logo: '/lovable-uploads/263a30cf-46e2-4c41-acdb-511ba6cf0420.png'
     },
     {
       name: 'Yale Ventures',
-      logo: '/lovable-uploads/6ee8466f-296f-445d-b951-e6fe330f581a.png'
+      logo: '/lovable-uploads/cd1539e9-2861-4e43-804b-4cad6dc559a2.png'
     },
     {
       name: 'The Bridge',
-      logo: '/lovable-uploads/93e8b246-921c-452b-8a89-a1cbcff7edd2.png'
+      logo: '/lovable-uploads/63a035c0-a416-44a2-a5ee-d2e6434fad2d.png'
     }
   ];
-
-  // Let's add some debugging to verify images
-  useEffect(() => {
-    // Check if images exist by logging to console
-    clients.forEach(client => {
-      const img = new Image();
-      img.onload = () => console.log(`Image loaded successfully: ${client.name}`);
-      img.onerror = () => console.error(`Failed to load image: ${client.name}, path: ${client.logo}`);
-      img.src = client.logo;
-    });
-  }, []);
 
   return (
     <section id="clients" className="py-16 bg-new-gray">
@@ -49,21 +38,14 @@ const ClientsSection = () => {
           {clients.map(client => (
             <div 
               key={client.name} 
-              className="w-full flex items-center justify-center h-20 transition-opacity hover:opacity-80"
+              className="w-full flex flex-col items-center justify-center h-24 transition-opacity hover:opacity-80"
             >
               <img
                 src={client.logo}
                 alt={`${client.name} logo`}
-                className="h-12 md:h-14 lg:h-16 object-contain"
+                className="max-h-16 md:max-h-20 lg:max-h-24 object-contain"
                 loading="lazy"
-                onError={(e) => {
-                  console.error(`Error loading image for ${client.name}`);
-                  // Fallback to displaying the name if image fails
-                  e.currentTarget.style.display = 'none';
-                }}
               />
-              {/* Backup text in case image fails */}
-              <span className="text-sm text-white opacity-80">{client.name}</span>
             </div>
           ))}
         </div>
