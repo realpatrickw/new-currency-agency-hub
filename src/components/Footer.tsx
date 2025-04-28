@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-
 const Footer = () => {
-  return (
-    <footer className="bg-black pt-16 pb-8 border-t border-white/10">
+  return <footer className="bg-black pt-16 pb-8 border-t border-white/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Column 1 - Logo and description */}
@@ -45,7 +42,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><a href="#" className="text-white/60 hover:text-white transition-colors">About Us</a></li>
               <li><a href="#" className="text-white/60 hover:text-white transition-colors">Services</a></li>
-              <li><a href="#" className="text-white/60 hover:text-white transition-colors">Portfolio</a></li>
+              
               <li><a href="#" className="text-white/60 hover:text-white transition-colors">Careers</a></li>
               <li><a href="#" className="text-white/60 hover:text-white transition-colors">Contact</a></li>
             </ul>
@@ -68,11 +65,7 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Subscribe to Our Newsletter</h3>
             <p className="text-white/60 mb-4">Get the latest industry insights and updates.</p>
             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-              <input 
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-2 bg-white/5 border border-white/10 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-new-pink"
-              />
+              <input type="email" placeholder="Enter your email" className="px-4 py-2 bg-white/5 border border-white/10 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-new-pink" />
               <Button className="bg-new-pink hover:bg-new-pink/90 text-white whitespace-nowrap">
                 Subscribe
               </Button>
@@ -92,8 +85,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
