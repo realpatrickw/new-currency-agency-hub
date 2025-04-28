@@ -25,8 +25,8 @@ const StatsSection = () => {
           {/* Third Stat */}
           <div className="bg-new-gray p-8 rounded-lg border border-white/10">
             <div className="flex flex-col">
-              <span className="text-new-pink text-2xl font-bold mb-2">100%</span>
-              <p className="text-white text-lg font-semibold">Virality Brought to Customers</p>
+              <span className="text-new-pink text-2xl font-bold mb-2">7x</span>
+              <p className="text-white text-lg font-semibold">ROAS in average</p>
             </div>
           </div>
         </div>
