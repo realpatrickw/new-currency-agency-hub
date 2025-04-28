@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
-
 const HeroSection = () => {
-  return (
-    <section className="pt-32 pb-20 md:pt-36 md:pb-24 relative overflow-hidden">
+  return <section className="pt-32 pb-20 md:pt-36 md:pb-24 relative overflow-hidden">
       <div className="absolute inset-0 z-0 bg-new-dark opacity-95" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -30,11 +27,7 @@ const HeroSection = () => {
           {/* Right Column - Image */}
           <div className="relative lg:ml-auto">
             <div className="relative aspect-[4/3] w-full max-w-[600px] mx-auto">
-              <img
-                src="/lovable-uploads/9761ff00-c636-4042-aa58-d46ea05ae8ee.png"
-                alt="Social Media Marketing Showcase"
-                className="w-full h-full object-contain"
-              />
+              <img alt="Social Media Marketing Showcase" className="w-full h-full object-contain" src="/lovable-uploads/1b74d76b-dbba-43e6-9a22-b5d169dd86eb.png" />
               <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-br from-new-pink/20 to-purple-500/20 blur-3xl opacity-30 rounded-full" />
             </div>
           </div>
@@ -44,8 +37,6 @@ const HeroSection = () => {
       {/* Decorative elements */}
       <div className="absolute top-0 -left-40 w-80 h-80 bg-new-pink/20 rounded-full filter blur-3xl opacity-20"></div>
       <div className="absolute bottom-0 -right-40 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl opacity-20"></div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
