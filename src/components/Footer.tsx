@@ -61,16 +61,7 @@ const Footer = () => {
           </div>
           
           {/* Column 4 - Newsletter */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Subscribe to Our Newsletter</h3>
-            <p className="text-white/60 mb-4">Get the latest industry insights and updates.</p>
-            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
-              <input type="email" placeholder="Enter your email" className="px-4 py-2 bg-white/5 border border-white/10 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-new-pink" />
-              <Button className="bg-new-pink hover:bg-new-pink/90 text-white whitespace-nowrap">
-                Subscribe
-              </Button>
-            </div>
-          </div>
+          
         </div>
         
         {/* Bottom section with copyright and additional links */}
