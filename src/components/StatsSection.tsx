@@ -9,24 +9,24 @@ const StatsSection = () => {
           {/* First Stat */}
           <div className="bg-new-gray p-8 rounded-lg border border-white/10">
             <div className="flex flex-col">
-              <span className="text-new-pink text-2xl font-bold mb-2">7x</span>
-              <p className="text-white text-lg font-semibold">Faster Traditional Social Marketing, That's New Currency</p>
+              <span className="text-new-pink text-2xl font-bold mb-2">1M+</span>
+              <p className="text-white text-lg font-semibold">Average Impressions We Bring to Our Clients</p>
             </div>
           </div>
           
           {/* Second Stat */}
           <div className="bg-new-gray p-8 rounded-lg border border-white/10">
             <div className="flex flex-col">
-              <span className="text-new-pink text-2xl font-bold mb-2">18+</span>
-              <p className="text-white text-lg font-semibold">AI & SaaS Brands Building With Us</p>
+              <span className="text-new-pink text-2xl font-bold mb-2">300+</span>
+              <p className="text-white text-lg font-semibold">Influencers in Tech and AI Space Working With Us</p>
             </div>
           </div>
           
           {/* Third Stat */}
           <div className="bg-new-gray p-8 rounded-lg border border-white/10">
             <div className="flex flex-col">
-              <span className="text-new-pink text-2xl font-bold mb-2">+42%</span>
-              <p className="text-white text-lg font-semibold">Average Conversion Rate Improvement</p>
+              <span className="text-new-pink text-2xl font-bold mb-2">100%</span>
+              <p className="text-white text-lg font-semibold">Virality Brought to Customers</p>
             </div>
           </div>
         </div>
