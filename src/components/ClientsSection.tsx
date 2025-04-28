@@ -5,23 +5,23 @@ const ClientsSection = () => {
   const clients = [
     {
       name: 'Penn Venture Lab',
-      logo: '/lovable-uploads/client-1.png'
+      logo: '/lovable-uploads/98373f0e-628b-45f5-b22a-0eae800fa8ea.png'
     },
     {
       name: 'Tsai Center for Innovative Thinking at Yale',
-      logo: '/lovable-uploads/client-2.png'
+      logo: '/lovable-uploads/95b39ad1-6930-48cc-92e4-7da44f43a3b1.png'
     },
     {
       name: 'University of Toronto Entrepreneurship',
-      logo: '/lovable-uploads/client-3.png'
+      logo: '/lovable-uploads/9a1f44dc-7b02-493f-bfcb-8dfc5ecd1783.png'
     },
     {
       name: 'Yale Ventures',
-      logo: '/lovable-uploads/client-4.png'
+      logo: '/lovable-uploads/6ee8466f-296f-445d-b951-e6fe330f581a.png'
     },
     {
       name: 'The Bridge',
-      logo: '/lovable-uploads/client-5.png'
+      logo: '/lovable-uploads/93e8b246-921c-452b-8a89-a1cbcff7edd2.png'
     }
   ];
 
@@ -43,7 +43,7 @@ const ClientsSection = () => {
               <img
                 src={client.logo}
                 alt={`${client.name} logo`}
-                className="h-12 object-contain"
+                className="h-12 md:h-14 lg:h-16 object-contain"
                 loading="lazy"
               />
             </div>
