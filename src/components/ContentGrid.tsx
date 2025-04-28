@@ -1,16 +1,19 @@
-
 import React from 'react';
-
-const ContentCard = ({ title, category, overlay = false }: { title: string, category: string, overlay?: boolean }) => {
-  return (
-    <div className="relative rounded-lg overflow-hidden group cursor-pointer">
+const ContentCard = ({
+  title,
+  category,
+  overlay = false
+}: {
+  title: string;
+  category: string;
+  overlay?: boolean;
+}) => {
+  return <div className="relative rounded-lg overflow-hidden group cursor-pointer">
       <div className="aspect-w-1 aspect-h-1 relative">
         {/* This would be a real image in production */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-800/20 to-new-pink/20"></div>
         
-        {overlay && (
-          <div className="absolute inset-0 bg-black opacity-60 group-hover:opacity-40 transition-opacity"></div>
-        )}
+        {overlay && <div className="absolute inset-0 bg-black opacity-60 group-hover:opacity-40 transition-opacity"></div>}
         
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
@@ -23,41 +26,28 @@ const ContentCard = ({ title, category, overlay = false }: { title: string, cate
           <h4 className="text-white font-medium">{title}</h4>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 const ContentGrid = () => {
-  const contentItems = [
-    { title: "Connecting Customers", category: "UGC Campaign" },
-    { title: "AI Personalization Strategy", category: "Case Study" },
-    { title: "Driving SaaS Engagement", category: "Influencer Marketing" },
-    { title: "Key SaaS Metrics That Matter", category: "Whitepaper" },
-    { title: "Scaling Through Creative", category: "Success Story" },
-    { title: "Social Media Strategy for AI", category: "Guide" },
-  ];
-
-  return (
-    <section id="portfolio" className="py-16 bg-black">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <p className="text-new-pink uppercase tracking-wider mb-2">Our Feed</p>
-          <h2 className="text-3xl font-bold">Latest Work & Insights</h2>
-        </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {contentItems.map((item, index) => (
-            <ContentCard 
-              key={index}
-              title={item.title}
-              category={item.category}
-              overlay={index % 2 === 0}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  const contentItems = [{
+    title: "Connecting Customers",
+    category: "UGC Campaign"
+  }, {
+    title: "AI Personalization Strategy",
+    category: "Case Study"
+  }, {
+    title: "Driving SaaS Engagement",
+    category: "Influencer Marketing"
+  }, {
+    title: "Key SaaS Metrics That Matter",
+    category: "Whitepaper"
+  }, {
+    title: "Scaling Through Creative",
+    category: "Success Story"
+  }, {
+    title: "Social Media Strategy for AI",
+    category: "Guide"
+  }];
+  return;
 };
-
 export default ContentGrid;
