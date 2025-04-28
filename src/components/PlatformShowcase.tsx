@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Currency } from "lucide-react";
@@ -13,7 +14,10 @@ const PlatformShowcase = () => {
             </h2>
             <p className="text-white/70 mb-6">
               Our proprietary analytics platform gives you real-time insights into your campaign performance, 
-              influencer engagement, and ROI metrics. Make data-driven decisions to optimize your marketing strategy.
+              influencer engagement, and ROI metrics. As we also provide advanced analytics for brands, 
+              including competitor analytics, campaign data tracking, viral content hook analysis, 
+              and provide regular updates and reports for comprehensive performance monitoring.
+              Make data-driven decisions to optimize your marketing strategy.
             </p>
             <ul className="mb-8 space-y-3">
               <li className="flex items-center">
