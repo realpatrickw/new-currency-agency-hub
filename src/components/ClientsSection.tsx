@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 
@@ -6,7 +5,7 @@ const ClientsSection = () => {
   const clients = [
     {
       name: 'Penn Venture Lab',
-      logo: `${supabase.storage.from('client-logos').getPublicUrl('1 (2).png').data.publicUrl}`
+      logo: `https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//pen.png`
     },
     {
       name: 'Tsai Center for Innovative Thinking at Yale',
