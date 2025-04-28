@@ -20,7 +20,7 @@ const TestimonialSection = () => {
             <div className="flex items-center">
               <div className="w-12 h-12 rounded-full bg-purple-700/30"></div>
               <div className="ml-4">
-                <p className="text-white font-semibold">Sarah T</p>
+                <p className="text-white font-semibold">Sarah Johnson</p>
                 <p className="text-white/60 text-sm">CMO, Consumer AI</p>
               </div>
             </div>
@@ -35,7 +35,7 @@ const TestimonialSection = () => {
             <div className="flex items-center">
               <div className="w-12 h-12 rounded-full bg-new-pink/30"></div>
               <div className="ml-4">
-                <p className="text-white font-semibold">Michael C</p>
+                <p className="text-white font-semibold">Michael Chen</p>
                 <p className="text-white/60 text-sm">Founder, B2B SaaS</p>
               </div>
             </div>
