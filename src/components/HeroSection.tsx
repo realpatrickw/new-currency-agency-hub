@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
-
 const HeroSection = () => {
   return <section className="pt-32 pb-20 md:pt-36 md:pb-24 relative overflow-hidden">
       <div className="absolute inset-0 z-0 bg-new-dark opacity-95" />
@@ -18,10 +16,7 @@ const HeroSection = () => {
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-white/70 mb-8">
-              New Currency helps AI companies and SaaS businesses grow through strategic
-              influencer marketing and UGC that converts.
-            </p>
+            <p className="text-lg md:text-xl mb-8 text-slate-50">New Currency is an Influencer Marketing Agency that helps AI companies and SaaS businesses grow through strategic influencer marketing and UGC campaign that converts.</p>
             
             <Button className="bg-new-pink hover:bg-new-pink/90 text-white px-8 py-6 text-lg rounded-md flex items-center">
               Get Started <ArrowRight className="ml-2" size={18} />
@@ -43,5 +38,4 @@ const HeroSection = () => {
       <div className="absolute bottom-0 -right-40 w-80 h-80 bg-purple-500/20 rounded-full filter blur-3xl opacity-20"></div>
     </section>;
 };
-
 export default HeroSection;
