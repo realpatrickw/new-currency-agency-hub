@@ -8,13 +8,13 @@ const FeaturedCaseStudy = () => {
           <div className="relative">
             <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-800/20 to-new-pink/20"></div>
-              <div className="absolute top-12 left-4 right-4 flex flex-col items-center space-y-6">
+              <div className="absolute top-4 left-4 right-4 space-y-4">
                 <img 
                   src="https://ojhghmadkdllnqcqpbhg.supabase.co/storage/v1/object/public/client-logos//Image_20250428123638.png"
                   alt="FindHiringManager.com logo"
-                  className="w-64 h-auto object-contain"
+                  className="w-48 h-auto object-contain"
                 />
-                <div className="space-y-2 text-center">
+                <div className="space-y-2">
                   <p className="text-sm text-white/70">Featured Case Study</p>
                   <h3 className="text-xl font-bold text-white">FindHiringManager.com: From Launch to Success</h3>
                   <p className="text-white/70 text-sm">How we helped achieve rapid customer acquisition through strategic marketing</p>
